@@ -1,0 +1,13 @@
+Base Configs: 
+    ☐ update README.md with the project details
+    
+Starting Point Tasks:
+    ☐ Install and configure drizzle with PostgreSQL
+    ☐ Create database schema PostgreSQL (with drizzle)
+
+Domain Tasks:
+    ☐ Create Domain Module
+        - Entities
+        - Core Logic
+        - DTOs
+    ☐ Define how modules will be distributed
