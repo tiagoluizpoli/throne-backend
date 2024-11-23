@@ -13,6 +13,11 @@ export const applicationSchema = z.object({
   port: z.coerce.number().positive().int(),
 })
 
+export const databaseSchema = z.object({
+  url: z.string(),
+})
+
 export const configSchema = z.object({
   application: applicationSchema,
+  database: databaseSchema,
 })

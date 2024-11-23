@@ -1,0 +1,19 @@
+services: 
+  postgres:
+    image: postgres:15.3
+    container_name: throne-postgres
+    ports:
+      - "5434:5434"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=local-password
+    command: -p 5434
+    volumes:
+      - throne-postgres:/var/lib/postgresql/data
+    networks:
+      - solutions  
+volumes:
+  throne-postgres:
+networks:
+  solutions:
+    driver: bridge
