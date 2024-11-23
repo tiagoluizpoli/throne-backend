@@ -1,6 +1,7 @@
 import { z } from 'zod'
-import { configSchema, environmentSchema } from './config.schema'
+import { configSchema, databaseSchema, environmentSchema } from './config.schema'
 
-export type Environment = z.infer<typeof environmentSchema>
+export type EnvironmentConfig = z.infer<typeof environmentSchema>
+export type DatabaseConfig = z.infer<typeof databaseSchema>
 
 export type Config = z.infer<typeof configSchema>
