@@ -27,7 +27,10 @@
         }
       }
     },
-    "ignore": ["node_modules/**/*", "dist/**/*"]
+    "ignore": [
+      "node_modules/**/*",
+      "dist/**/*"
+    ]
   },
   "formatter": {
     "enabled": true,
@@ -42,12 +45,14 @@
     },
     "formatter": {
       "quoteStyle": "single",
-      "semicolons": "asNeeded"
+      "semicolons": "always"
     }
   },
   "overrides": [
     {
-      "include": ["src/shared/module/config/**"],
+      "include": [
+        "src/shared/module/config/**"
+      ],
       "linter": {
         "rules": {
           "nursery": {

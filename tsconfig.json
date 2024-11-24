@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "moduleResolution": "node",
     "declaration": true,
     "removeComments": true,
     "emitDecoratorMetadata": true,
@@ -32,8 +31,8 @@
     "strict": true,
     "strictFunctionTypes": true,
     "paths": {
-      "@/sharedModule/*": [
-        "./src/shared/module/*"
+      "@/infra/*": [
+        "./src/module/infrastructure/*"
       ],
       "@/*": [
         "./src/*"
