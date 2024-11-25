@@ -1,0 +1,103 @@
+POST http://localhost:5000/api/v1/json-schema
+Content-Type: application/json
+
+{
+    "name": "Fake Ifood",
+    "schema": {
+        "accountName": {
+            "sourcePath": ["Account", "Account Name"],
+            "type": "string"
+        },
+        "pessoa": {
+            "type": "object",
+            "sourcePath": ["Account", "person"],
+            "properties": {
+                "nome": {
+                    "sourcePath": ["name"],
+                    "type": "string"
+                },
+                "sobrenome": {
+                    "sourcePath": ["lastName"],
+                    "type": "string"
+                }
+            }
+        },
+        "orders": {
+            "sourcePath": ["Account", "Order"],
+            "type": "array",
+            "items": {
+                "orderId": {
+                    "sourcePath": ["OrderID"],
+                    "type": "string"
+                },
+                "products": {
+                    "sourcePath": ["Product"],
+                    "type": "array",
+                    "items": {
+                        "productName": {
+                            "sourcePath": ["Product Name"],
+                            "type": "string"
+                        },
+                        "productId": {
+                            "sourcePath": ["ProductID"],
+                            "type": "string"
+                        },
+                        "sku": {
+                            "sourcePath": ["SKU"],
+                            "type": "string"
+                        },
+                        "price": {
+                            "sourcePath": ["Price"],
+                            "type": "number"
+                        },
+                        "quantity": {
+                            "sourcePath": ["Quantity"],
+                            "type": "number"
+                        },
+                        "description": {
+                            "sourcePath": ["Description"],
+                            "type": "object",
+                            "properties": {
+                                "nestedArray": {
+                                    "sourcePath": ["Nested Array"],
+                                    "type": "array",
+                                    "items": {
+                                        "arrayItem": {
+                                            "sourcePath": ["Array Item"],
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "colour": {
+                                    "sourcePath": ["Colour"],
+                                    "type": "string"
+                                },
+                                "width": {
+                                    "sourcePath": ["Width"],
+                                    "type": "number"
+                                },
+                                "height": {
+                                    "sourcePath": ["Height"],
+                                    "type": "number"
+                                },
+                                "depth": {
+                                    "sourcePath": ["Depth"],
+                                    "type": "number"
+                                },
+                                "weight": {
+                                    "sourcePath": ["Weight"],
+                                    "type": "number"
+							    }
+						    }
+					    }
+				    }
+			    }
+		    }
+	    }
+    },
+    "metadata": true
+}
+
+###
+
+GET http://localhost:5000/api/v1/api
